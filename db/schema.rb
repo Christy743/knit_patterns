@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180207222506) do
+ActiveRecord::Schema.define(version: 20180207231735) do
 
   create_table "comments", force: :cascade do |t|
     t.integer "pattern_id"
@@ -24,6 +24,7 @@ ActiveRecord::Schema.define(version: 20180207222506) do
   create_table "needles", force: :cascade do |t|
     t.string "us_size"
     t.string "name"
+    t.integer "pattern_id"
   end
 
   create_table "patterns", force: :cascade do |t|
@@ -54,6 +55,7 @@ ActiveRecord::Schema.define(version: 20180207222506) do
     t.string "name"
     t.string "weight"
     t.integer "quantity", default: 1
+    t.integer "pattern_id"
   end
 
 end

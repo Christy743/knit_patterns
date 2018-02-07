@@ -7,13 +7,8 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 10.times do
-  User.create(username: "Lucky Lugiano", email: "ll@yahoo.com", password: "12345678")
-end
-
-5.times do
-  Pattern.create(name: "Red Shawl", content: "Knit here, Purl there and everywhere")
-end
-
-5.times do
-  Needle.create(us_size: "8", name: "Circular 24 inch")
+  User.create(
+    username: Faker::Name.name,
+    email: Faker::Internet.email,
+    password: Faker::Internet.password)
 end

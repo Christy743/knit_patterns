@@ -1,9 +1,14 @@
 <% if user_signed_in? %>
-
-<h1><%= current_user.email %>, Welcome to Knit Patterns!</h1>
-
+  <h1>Welcome to Knit Patterns! You are signed in as <%= current_user.email %>.</h1>
 <% else %>
+  <h1>Welcome to Knit Patterns!</h1>
+<% end %>
 
-<h1>Welcome to Knit Patterns!</h1>
-
+<% if session[:user_id] %>
+  <h1><%= @user.name %></h1>
+  <h2>Email: <%= @user.email %></h2>
+  <h2>Facebook UID: <%= @user.uid %></h2>
+  <img src="<%= @user.image %>">
+<% else %>
+  <%= link_to "Sign in with Facebook", user_facebook_omniauth_authorize_path %>
 <% end %>

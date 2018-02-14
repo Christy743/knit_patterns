@@ -34,6 +34,7 @@ gem 'devise', '~> 4.2'
 gem 'dotenv-rails'
 gem 'omniauth-facebook'
 gem 'omniauth-twitter'
+gem 'omniauth'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
